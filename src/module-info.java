@@ -45,3 +45,26 @@ public class Kata {
 Notes: used endsWith() method which checks whether the string ends with a specified suffix.This method returns a boolean value true or false.
 
 */
+/*
+Description:
+Simple, remove the spaces from the string, then return the resultant string.
+
+class Kata {
+    static String noSpace(final String x) {
+        String y = x.replaceAll("\\s+","");
+        return y;
+    }
+}
+
+NOTES: used replaceAll() method returns a string replacing all the sequence of characters matching regex and replacement string.
+REGEX HELP
+. Any character.
+\d A digit: [0-9]
+\D A non-digit: [\^0-9]
+\s A whitespace character: [ \t\n\x0B\f\r]
+\S A non-whitespace character: [\^\s]
+\w A word character: [a-zA-Z_0-9]
+\W A non-word character: [\^\w]
+
+
+*/
