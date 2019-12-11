@@ -68,3 +68,50 @@ REGEX HELP
 
 
 */
+/*
+Description:
+In this kata you need to check the provided array (x) for good ideas 'good' and bad ideas 'bad'. 
+If there are one or two good ideas, return 'Publish!', if there are more than 2 return 'I smell a series!'. 
+If there are no good ideas, as is often the case, return 'Fail!'.
+
+import java.util.*;
+public class Kata {
+
+  public static String well(String[] x) {
+  System.out.println(Arrays.toString(x)); //To see what array was printing for testing purposes
+    String good = "good";
+    String bad = "bad";
+    String fail = "Fail!";
+    String publish = "Publish!";
+    String series = "I smell a series!";
+    int goodCounter = 0;
+    //Loop through array of Strings named x
+    for(int i=0; i < x.length; i++){
+      if(x[i] == "good"){
+      ++goodCounter;
+      System.out.println("Good Counter " + goodCounter);
+      } 
+    }
+    if(goodCounter <= 0){
+    return fail;
+    } else if (goodCounter <= 2){
+    return publish;
+    } else {
+    return series;
+   }
+  }
+}
+
+Refactor:
+
+int counter = 0;
+for(int i = 0; i < x.length; i ++){
+	if(x[i] == "good") counter++;
+	}
+if(counter == 0) return "Fail!";
+else if(counter <= 2) return "Publish!";
+return "I smell a series!";
+
+Notes:
+The java.util.Arrays.toString(int[]) method returns a string representation of the contents of the specified int array.
+*/
