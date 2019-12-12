@@ -115,3 +115,56 @@ return "I smell a series!";
 Notes:
 The java.util.Arrays.toString(int[]) method returns a string representation of the contents of the specified int array.
 */
+/*
+ 
+ *Description:
+ *Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers. Return your answer as a number.
+	
+
+ import java.util.List;
+import java.util.*;
+
+Submitted with Errors...
+public class MixedSum {
+ /*
+  Assume input will be only of Integer o String type
+  
+	public int sum(List<?> mixed) {	
+  int total = 0;
+  
+  for( int i = 0; i < mixed.size(); i++){
+    if (mixed.get(i) instanceof String ){
+    total =  total + Integer.parseInt(mixed.get(i));
+    }else if(mixed.get(i) instanceof Integer){
+    total = total + mixed.get(i);
+    }
+    //total = total + mixed.get(i);
+    System.out.println(mixed.get(i));
+  }
+		return total;
+	}
+}
+ 
+ Refactor:
+ import java.util.List;
+
+public class MixedSum {
+  
+	public int sum(List<?> mixed) {	
+  int total = 0;
+  int number = 0;
+  
+  for( int i = 0; i < mixed.size(); i++){
+    // take the value in mixed at the i index convert it to a string then convert to int and assign to number
+    number = Integer.parseInt(mixed.get(i).toString());
+    // add number to the total
+    total += number;;
+    }
+		return total;
+	}
+}
+ 
+ Notes: We can convert String to an int in java using Integer.parseInt() method. 
+ The Integer.toString() method converts int to String. The toString() is the static method of Integer class. 
+ 
+ */
