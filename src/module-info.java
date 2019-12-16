@@ -158,7 +158,7 @@ public class MixedSum {
     // take the value in mixed at the i index convert it to a string then convert to int and assign to number
     number = Integer.parseInt(mixed.get(i).toString());
     // add number to the total
-    total += number;;
+    total += number;
     }
 		return total;
 	}
@@ -166,5 +166,59 @@ public class MixedSum {
  
  Notes: We can convert String to an int in java using Integer.parseInt() method. 
  The Integer.toString() method converts int to String. The toString() is the static method of Integer class. 
+ 
+ 
+Description:
+Implement String#digit? (in Java StringUtils.isDigit(String)), 
+which should return true if given object is a digit (0-9), false otherwise.
+ 
+My Solution:
+import java.util.regex.*;
+
+public class StringUtils {
+  
+  public static boolean isDigit(String s) {
+  if(Pattern.matches("\\d",s)){
+  return true;
+   }else {
+   return false;
+	}
+	}
+}
+ 
+ Refactor:
+ public class StringUtils {
+  public static boolean isDigit(String s) {
+    return s.matches("[0-9]");
+  }
+}
+ 
+ Notes: java.util.regex.* used to evaluate the string. matches() method It compiles the regular expression and matches the given input with the pattern.
+ Regex Basics:
+ . any charactor
+ \d or [0-9] any digit
+ \D or [^0-9] any non-digit
+ \s or [\t\n\x0B\f\r] any whitespace character
+ \S or [^\s] any non-whitespace character
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
  
  */
