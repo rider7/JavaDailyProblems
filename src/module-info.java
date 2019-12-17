@@ -202,13 +202,30 @@ public class StringUtils {
  \S or [^\s] any non-whitespace character
  
  
+ Description:
+Your task is to sum the differences between consecutive pairs in the array in descending order.
+
+For example: sumOfDifferences([2, 1, 10]) Returns 9
+
+Descending order: [10, 2, 1]
+
+Sum: (10 - 2) + (2 - 1) = 8 + 1 = 9
+
+If the array is empty or the array has only one element the result should be 0 (Nothing in Haskell).
  
+import java.util.Arrays;
+
+public class ZywOo {
+  public static int sumOfDifferences(int[] arr) {
+    Arrays.sort(arr); // sort arrays
+    //if length of array is less than or equal to 1 return zero
+    //else return the index of the array at array length -1 
+    //and subtract the value in the first index of the array
+    return arr.length <= 1 ? 0 : arr[arr.length-1] - arr[0];
+  }
  
- 
- 
- 
- 
- 
+ Notes: sort() method is a java.util.Arrays class method.
+ Ternary operator - variable x = (expression) ? value if true: value if false
  
  
  
