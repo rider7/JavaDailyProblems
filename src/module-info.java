@@ -20,7 +20,7 @@ public class SortAndStar {
 }
 */
 /*12-9-2019
-
+----------------------------------------------------------------------------------------
 Description:
 
 Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string).
@@ -46,6 +46,7 @@ Notes: used endsWith() method which checks whether the string ends with a specif
 
 */
 /*
+ ----------------------------------------------------------------------------------------
 Description:
 Simple, remove the spaces from the string, then return the resultant string.
 
@@ -69,6 +70,7 @@ REGEX HELP
 
 */
 /*
+ -----------------------------------------------------------------------------
 Description:
 In this kata you need to check the provided array (x) for good ideas 'good' and bad ideas 'bad'. 
 If there are one or two good ideas, return 'Publish!', if there are more than 2 return 'I smell a series!'. 
@@ -116,7 +118,7 @@ Notes:
 The java.util.Arrays.toString(int[]) method returns a string representation of the contents of the specified int array.
 */
 /*
- 
+ --------------------------------------------------------------------------------------------------
  *Description:
  *Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers. Return your answer as a number.
 	
@@ -167,7 +169,7 @@ public class MixedSum {
  Notes: We can convert String to an int in java using Integer.parseInt() method. 
  The Integer.toString() method converts int to String. The toString() is the static method of Integer class. 
  
- 
+ --------------------------------------------------------------------------------------------------
 Description:
 Implement String#digit? (in Java StringUtils.isDigit(String)), 
 which should return true if given object is a digit (0-9), false otherwise.
@@ -201,7 +203,7 @@ public class StringUtils {
  \s or [\t\n\x0B\f\r] any whitespace character
  \S or [^\s] any non-whitespace character
  
- 
+ ----------------------------------------------------------------------------------
  Description:
 Your task is to sum the differences between consecutive pairs in the array in descending order.
 
@@ -226,16 +228,49 @@ public class ZywOo {
  
  Notes: sort() method is a java.util.Arrays class method.
  Ternary operator - variable x = (expression) ? value if true: value if false
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+ --------------------------------------------------------------------------------------
+Description:
+You will be given an vector of string(s). You must sort it alphabetically (case-sensitive!!) and then return the first value.
 
+The returned value must be a string, and have "***" between each of its letters.
+
+You should not remove or add elements from/to the array.
+ 
+ 
+ public class SortAndStar {
+
+    public static String twoSort(String[] s) {
+        java.util.Arrays.sort(s);
+
+        return String.join("***",s[0].split(""));
+    }
+}
+ 
+Notes: The java.lang.string.join() method concatenates the given elements with the delimiter and returns the concatenated string.
+The string split() method breaks a given string around matches of the given regular expression.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
  */
