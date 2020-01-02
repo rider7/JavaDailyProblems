@@ -249,6 +249,76 @@ You should not remove or add elements from/to the array.
 Notes: The java.lang.string.join() method concatenates the given elements with the delimiter and returns the concatenated string.
 The string split() method breaks a given string around matches of the given regular expression.
  
+ ---------------------------------------------------------------------------------------------------
+ Description:
+ Complete the function, which calculates how much you need to tip based on the total amount of the bill and the service.
+
+You need to consider the following ratings:
+
+Terrible: tip 0%
+Poor: tip 5%
+Good: tip 10%
+Great: tip 15%
+Excellent: tip 20%
+The rating is case insensitive (so "great" = "GREAT"). If an unrecognised rating is received, then you need to return:
+
+"Rating not recognised" in Javascript, Python and Ruby...
+...or null in Java
+...or -1 in C#
+Because you're a nice person, you always round up the tip, regardless of the service.
+ 
+ Solution:
+ public class TipCalculator {
+
+  public static Integer calculateTip(double amount, String rating) {
+   
+    switch(rating.toLowerCase()) {
+      case "terrible": return 0;
+      case "poor": return (int) Math.ceil(amount * 0.05);
+      case "good": return (int) Math.ceil(amount * 0.1);
+      case "great": return (int) Math.ceil(amount * 0.15);
+      case "excellent": return (int) Math.ceil(amount * 0.2);
+      default: return null;      
+    }   
+  }
+}
+ 
+ Notes: switch statement - switch expression is evaluated once and compared to the value of each case. If there is a match, the associated block of code is executed.
+ Math.ceil.() - returns the double value that is greater than or equal to the argument and is equal to the nearest mathematical integer.
+ .toLowerCase() - converts characters of a string into lower case characters.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
  
  
