@@ -322,13 +322,49 @@ public class Kata {
 }
  
  
+ Description:
+ Given three integers a ,b ,c, return the largest number obtained after inserting the following operators and brackets: +, *, ().
  
+ My Solution:
+ public class Kata
+{
+    public static int expressionsMatter(int a, int b, int c)
+    {
+        int maximum = 0;
+        int firstEquation = a * (b + c);
+        int secondEquation = a * b * c;
+        int thirdEquation = a + b * c;
+        int fourthEquation = (a + b) * c;
+        int fifthEquation = a * b + c;
+        int sixthEquation = a + b + c;
+        
+        
+        if(firstEquation > maximum){
+        maximum = firstEquation;}
+        if(secondEquation > maximum) {
+        maximum = secondEquation;}
+        if(thirdEquation > maximum){
+        maximum = thirdEquation;}
+        if(fourthEquation > maximum){
+        maximum = fourthEquation;}
+        if(fifthEquation > maximum){
+        maximum = fifthEquation;}
+        if(sixthEquation > maximum){
+        maximum = sixthEquation;}
+        return maximum;
+    }
+}
  
+ Best Practice:
+ public class Kata
+{
+    public static int expressionsMatter(int a, int b, int c)
+    {
+      return  Math.max(Math.max(a + b + c, a * b * c),Math.max ((a + b) * c, a * (b + c)));
+    }
+}
  
- 
- 
- 
- 
+ Notes: Math.max returns the greater of two int values. Best practice splits the equations up into two groups to compare the greater separately then compares the greater out of the two groups using Math.max twice.
  
  
  
