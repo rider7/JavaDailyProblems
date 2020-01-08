@@ -287,6 +287,8 @@ Because you're a nice person, you always round up the tip, regardless of the ser
  Math.ceil.() - returns the double value that is greater than or equal to the argument and is equal to the nearest mathematical integer.
  .toLowerCase() - converts characters of a string into lower case characters.
  
+--------------------------------------------------------------------------------------------------- 
+ 
  Description:
  Simple challenge - eliminate all bugs from the supplied code so that the code runs and outputs the expected value. Output should be the length of the longest word, as a number.
 There will only be one 'longest' word.
@@ -321,6 +323,7 @@ public class Kata {
   }
 }
  
+ -------------------------------------------------------------------------------------------------------------------
  
  Description:
  Given three integers a ,b ,c, return the largest number obtained after inserting the following operators and brackets: +, *, ().
@@ -366,8 +369,35 @@ public class Kata {
  
  Notes: Math.max returns the greater of two int values. Best practice splits the equations up into two groups to compare the greater separately then compares the greater out of the two groups using Math.max twice.
  
+ ------------------------------------------------------------------------------------------------------------------------
  
+ Description:
+ You were camping with your friends far away from home, but when it's time to go back, you realize that you fuel is running out and the nearest pump is 50 miles away! 
+ You know that on average, your car runs on about 25 miles per gallon. There are 2 gallons left. Considering these factors, write a function that tells you if it is possible to get to the pump or not. 
+ Function should return true if it is possible and false if not. The input values are always positive.
  
+ My Solution:
+ public class Kata {
+  
+  public static boolean zeroFuel(double distanceToPump, double mpg, double fuelLeft) {
+    double possibleDistance = mpg * fuelLeft;
+    if(possibleDistance >= distanceToPump){
+    return true;
+    }else {
+    return false;
+    }
+  }
+  
+}
+ 
+ Alternate Solutions:
+ class Kata {
+  static boolean zeroFuel(double distanceToPump, double mpg, double fuelLeft) {
+    return distanceToPump <= mpg * fuelLeft;
+  }
+}
+ 
+ Notes: More efficient to not use If/Else statements but might possibly want to use the value of possibleDistance later in the application.
  
  
  
