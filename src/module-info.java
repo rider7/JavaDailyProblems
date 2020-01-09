@@ -399,9 +399,219 @@ public class Kata {
  
  Notes: More efficient to not use If/Else statements but might possibly want to use the value of possibleDistance later in the application.
  
+ ------------------------------------------------------------------------------------------
+ 
+ Description:
+ Complete the function that calculates the area of the red square, when the length of the circular arc A is given as the input.
+ Return the result rounded to two decimals.
+ 
+ My Solution:
+ public class Geometry{
+  public static double squareArea(double A){
+  double diameter = 0;
+  double circum = 0;
+  double area = 0;
+  double total = 0;
+  
+  circum = A * 2.0;
+  diameter = circum / Math.PI;
+  area = Math.pow(diameter,2.0);
+  total = area * 100; //Remove two decimal spaces
+  total = Math.round(total);//Round up
+
+    return total/100;//Add two decimal spaces
+  }
+}
+ 
+Best Practice:
+ public class Geometry{
+  public static double squareArea(double A){
+        double l = (2*A)/Math.PI;
+        double x = l*l;
+        double y = Math.round(x * 100) * 0.01d;
+        return y;
+    }
+}
+
+Notes: Math.pow() method s used to calculate a number raise to the power of some other number. 
+This function accepts two parameters and returns the value of first parameter raised to the second parameter.
+
+Math.PI used to express PI
+ 
+Math.round() is a built-in math function which returns the closest long to the argument. 
+The result is rounded to an integer by adding 1/2, taking the floor of the result after adding 1/2, and casting the result to type long.
  
  
  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
  
  
  
