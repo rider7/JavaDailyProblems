@@ -441,18 +441,77 @@ Math.PI used to express PI
 Math.round() is a built-in math function which returns the closest long to the argument. 
 The result is rounded to an integer by adding 1/2, taking the floor of the result after adding 1/2, and casting the result to type long.
  
+------------------------------------------------------------------------------------------------------- 
  
+ Description:
+ Return a new array consisting of elements which are multiple of their own index in input array (length > 1).
  
+ My Solution:
+ public class ZywOo {
+  public static int[] multipleOfIndex(int[] array) {
+    int myArray[] = {0};
+    for(int i = 0; i < array.length; i++){ 
+      if(i != 0 && array[i] % i == 0){
+        myArray[i] = array[i];
+      }
+    }
+    return myArray;   
+  }
+}
  
- 
- 
- 
- 
- 
- 
- 
- 
- 
+Best Practice:
+import java.util.stream.*;
+
+public class ZywOo {
+  public static int[] multipleOfIndex(int[] a) {
+    return IntStream.range(1,a.length) //basically creates a stream that will loop through the first index to the last(length of the array)
+    .filter(i->a[i]%i==0) //check each index based on the equation to see if there is a remainder to determine if it is divisible by value/index
+    .map(i->a[i]) //assign the value of the index i to the array at index i
+    .toArray(); //return the new array
+  }
+}
+
+Notes:
+IntStream - A sequence of primitive int-valued elements supporting sequential and parallel aggregate operations. Do the same operations on integers in a row.
+.range() - IntStream range(int startInclusive, int endExclusive) basically works like a for loop.
+returns a sequential ordered IntStream from startInclusive (inclusive) to endExclusive (exclusive) by an incremental step of 1. 
+.filter() - returns a stream consisting of the elements of this stream that match the given predicate. 
+.map() -  returns a stream consisting of the results of applying the given function to the elements of this stream.
+.toArray() - return an array containing all the elements in the correct order.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  
  
  
