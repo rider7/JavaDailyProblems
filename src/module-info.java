@@ -479,9 +479,25 @@ returns a sequential ordered IntStream from startInclusive (inclusive) to endExc
 .map() -  returns a stream consisting of the results of applying the given function to the elements of this stream.
 .toArray() - return an array containing all the elements in the correct order.
 
+-----------------------------------------------------------------------------------------------------
 
+Description:
+Instructions: Fix the code
 
+My Solution:
+public class GhostCode{
+  public static String helloName(final String name){
+    if(name == null || name.equals("")){
+      return "Hello world!";}
+    else{
+      return "Hello my name is " + name;}
+  }
+}
 
+Notes:
+final keyword - When a variable is declared with final keyword, its value can’t be modified, essentially, a constant. 
+
+----------------------------------------------------------------------------------------------------------
 
 
 
