@@ -482,7 +482,7 @@ returns a sequential ordered IntStream from startInclusive (inclusive) to endExc
 -----------------------------------------------------------------------------------------------------
 
 Description:
-Instructions: Fix the code
+Fix the code
 
 My Solution:
 public class GhostCode{
@@ -499,9 +499,55 @@ final keyword - When a variable is declared with final keyword, its value can’t 
 
 ----------------------------------------------------------------------------------------------------------
 
+Description:
+Mr. Scrooge has a sum of money 'P' that wants to invest, and he wants to know how many years 'Y' this sum has to be kept in the bank in order for this sum of money to amount to 'D'.
 
+The sum is kept for 'Y' years in the bank where interest 'I' is paid yearly, and the new sum is re-invested yearly after paying tax 'T'
 
+Note that the principal is not taxed but only the year's accrued interest
 
+My Solution:
+public class Money {
+  public static int calculateYears(double principal, double interest,  double tax, double desired) {
+    //variables needed: integer of years, double taxes, double interestTotal
+    int years = 0;
+    double interestTotal = 0.0;
+    double taxes = 0.0;
+    //If statement to compare principal to desired - if D = P return 0 years
+    if(principal == desired){
+    years = 0;
+    return years;
+    } else {
+      for(years = 0; principal < desired; years++){  //Loop for number of years, checking if principal is less than years   
+    //Principal x Interest Rate  = Interest
+    interestTotal = principal * interest;
+    
+    //Interest x Tax Rate = Taxes
+    taxes = interestTotal * tax;
+    
+    //Principal = Principal + Interest - Taxes
+      principal = principal + (interestTotal - taxes);
+      } 
+      return years;
+    }
+  }
+}
+
+Best Practice:
+public class Money {
+  public static int calculateYears(double principal, double interest, double tax, double desired) {
+    int years = 0;
+    while (principal < desired) {
+      principal += principal * interest * (1 - tax);
+      years++;
+    }
+    return years;
+  }
+}
+
+Notes:
+The while loop loops through a block of code as long as a specified condition is true
+Simplify calculations when possible.
 
 
 
