@@ -549,6 +549,94 @@ Notes:
 The while loop loops through a block of code as long as a specified condition is true
 Simplify calculations when possible.
 
+---------------------------------------------------------------------------------------------------------------------------
+
+Description:
+Count the number of divisors of a positive integer n.
+
+Random tests go up to n = 500000.
+
+My Solution:
+public class FindDivisor {
+
+  public long numberOfDivisors(int n) {
+  System.out.println(n);
+  int numLoops = 1;
+  int numDivisor = 0;
+  while(numLoops <= n){
+    if(n % numLoops == 0){
+    numDivisor++;
+    System.out.println(numDivisor);
+    }
+  numLoops++;
+  System.out.println(numLoops);
+  }
+      System.out.println("return " + numDivisor);
+    return numDivisor;
+  }
+}
+
+
+Best Practice:
+public class FindDivisor {
+
+  public long numberOfDivisors(int n) {
+      long counter = 0;
+      for(int i=1; i<=n; i++){
+          if(n % i == 0){
+          counter++;
+          }
+      }
+      return counter;
+  }
+}
+
+
+
+
+Notes:
+Trouble with larger numbers and buffer because of println.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
