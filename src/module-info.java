@@ -576,7 +576,6 @@ public class FindDivisor {
   }
 }
 
-
 Best Practice:
 public class FindDivisor {
 
@@ -591,20 +590,34 @@ public class FindDivisor {
   }
 }
 
-
-
-
 Notes:
 Trouble with larger numbers and buffer because of println.
 
+----------------------------------------------------------------------------------
 
+My Solution:
+public class Clock
+{
+  public static int Past(int h, int m, int s) 
+  {
+  //1 second is 1000 milliseconds. Convert each unit to millisecond then add together for total.
+    return (h * 60 * 60 * 1000) + (m * 60 * 1000) + (s * 1000);
+  }
+}
 
+Best Practice:
+public class Clock
+{
+  public static int Past(int h, int m, int s) 
+  {
+    return h * 3600000 + m * 60000 + s * 1000;
+  }
+}
 
+Notes:
+Do less calculation by using totals ex. multiply by 3600000 instead of 60 x 60 x 1000.
 
-
-
-
-
+------------------------------------------------------------------------------------------------
 
 
 
