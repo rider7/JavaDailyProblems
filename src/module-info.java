@@ -619,9 +619,39 @@ Do less calculation by using totals ex. multiply by 3600000 instead of 60 x 60 x
 
 ------------------------------------------------------------------------------------------------
 
+Description:
+public class Sequence{
 
+  public static int[] reverse(int n){
+    //new array and counter
+    int myArr[] = new int[n];
+    int counter = 0;
+    //loop to count down from n while adding i to array
+    for(int i = n; i > 0; i--){
+    myArr[counter] = i;
+    counter++;
+    }
+    return myArr;
+  }
+}
 
+Best Practice:
+public class Sequence{
 
+  public static int[] reverse(int n){
+    //your code
+    int[] res = new int[n];
+    for (int i=0; i<n; i++) 
+      res[i]=n-i;
+    return res;
+  }
+}
+
+Notes:
+Make sure in loops the < or > sign is correctly used, stop and think about the counting. 
+int[] myArray = new int[3] creates an array of integers with 3 slots allocated on memory
+
+--------------------------------------------------------------------------------------------------
 
 
 
