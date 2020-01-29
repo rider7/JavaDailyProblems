@@ -653,9 +653,31 @@ int[] myArray = new int[3] creates an array of integers with 3 slots allocated o
 
 --------------------------------------------------------------------------------------------------
 
+Description:
+The cockroach is one of the fastest insects. 
+Write a function which takes its speed in km per hour and returns it in cm per second, rounded down to the integer (= floored).
+For example:
+cockroachSpeed(1.08) == 30
+Note! The input is a Real number (actual type is language dependent) and is >= 0. The result should be an Integer.
 
+My Solution:
+public class Cockroach{
+  public int cockroachSpeed(double x){
+    // Cast double to int, multiple by kmh to cms formula and Math.floor.
+    return (int)Math.floor(x * 27.778);
+    
+  }
+}
 
+Best Practice: - used the type casting to integer to truncate the values after the decimal point and essentially floor the value.
+public class Cockroach{
+  public int cockroachSpeed(double x){
+    // Good Luck!
+    return(int)(x*250/9);
+  }
+}
 
+Notes: Use type casting to floor values if type casting to integer. Ex. int a = (int) Math.round(6.14); down casts a double to an int a
 
 
 
