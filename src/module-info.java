@@ -679,10 +679,48 @@ public class Cockroach{
 
 Notes: Use type casting to floor values if type casting to integer. Ex. int a = (int) Math.round(6.14); down casts a double to an int a
 
+--------------------------------------------------------------------------------------------------------------------------------
 
+Description:
+I'm new to coding and now I want to get the sum of two arrays...actually the sum of all their elements. I'll appreciate for your help.
 
+P.S. Each array includes only integer numbers. Output is a number too.
 
+My Solution:
+public class Sum {
 
+  public static int arrayPlusArray(int[] arr1, int[] arr2) {
+  //variables: arr1Total, arr2Total, combinedArrTotal
+  int arr1Total = 0;
+  int arr2Total = 0;
+  int combinedArrTotal = 0;
+  
+  for(int i = 0; i < arr1.length; i++){ //loop through 1st array adding up values
+    arr1Total += arr1[i];
+  }
+  for(int x = 0; x < arr2.length; x++){ //loop through 2nd array adding up values
+    arr2Total += arr2[x];
+  }
+  combinedArrTotal = arr1Total + arr2Total;   //add the two together
+  System.out.println("out arr1" + arr1Total);   //return total
+    return combinedArrTotal;
+  }
+}
+
+Best Practice:
+import java.util.stream.*;
+
+public class Sum {
+
+  public static int arrayPlusArray(int[] arr1, int[] arr2) {
+    return IntStream.of(arr1).sum() + IntStream.of(arr2).sum();
+  }
+
+}
+
+Notes: IntStream(). A sequence of primitive int-valued elements supporting sequential and parallel aggregate operations.
+
+--------------------------------------------------------------------------------------------------------------------------------------
 
 
 
